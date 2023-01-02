@@ -5,23 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ONE Challenge 1</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <textarea id="ta-encript" cols="30" rows="10" placeholder="Input text here"></textarea>
-    <div>
-        <button id="btn-encript">Encript</button>
-        <button id="btn-decript">Decript</button>
-    </div>
+    <div class="container">
+        <div class="column1">
+            <header>
+                <object data="assets/img/logo-alura.svg"></object>
+            </header>
+            
+            <main>
+                <div class="ta-container1">
+                    <textarea id="ta-encript" placeholder="Input text here"></textarea>
+                    <div class="btn-container">
+                        <button id="btn-encript" class="btn">Encript</button>
+                        <button id="btn-decript" class="btn">Decript</button>
+                    </div>
+                </div>
+                
+            </main>
+        </div>
+        
+        
+        <div class="column2">
+            <aside>
+                <div class="ta-container2">
+                    <textarea id="ta-encripted" readonly placeholder="No text found, input text you want to encript or decript."></textarea>
+                    <div class="btn-container">
+                        <button id="btn-copy" class="btn">Copy</button>
+                    </div>
+                </div>
+                
+            </aside>
+        </div>
+        
 
-    <br>
-    <br>
-
-    <textarea id="ta-encripted" cols="30" rows="10" readonly placeholder="No text"></textarea>
-    <div>
-        <button id="btn-copy">Copy</button>
+        
+        <script src="js/index.js"></script>
     </div>
-    <script src="index.js"></script>
-    
 </body>
 </html>

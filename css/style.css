@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #F3F5FC;
+}
+header{
+    height: 10%;
+}
+.container{
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    clear: both;
+}
+textarea{
+    font-size: 32px;
+    background: transparent;
+    border: none;
+    color: #0A3871;
+    resize: none;
+    padding: 25px;
+}
+
+::placeholder {
+    color: #0A3871;
+    opacity: 1; 
+  }
+
+textarea:focus{
+    border: none;
+    outline: none;
+}
+#ta-encripted::placeholder {
+
+    color: #343A40;
+    opacity: 1; 
+}
+#ta-encript{
+    width: 100%;
+    height: 90%;
+    margin: auto;
+}
+#ta-encripted{
+    width: 100%;
+    height: 90%;
+    color: #495057;
+    font-size: 24px;
+}
+main{
+    height: 90%;
+}
+aside{
+    height: 100%;
+}
+.ta-container1{
+    width: 85%;
+    height: 100%;
+    padding: 20px;
+    margin: auto;
+}
+.ta-container2{
+    width: 75%;
+    height: 100%;
+    background-color: #fff;
+    padding: 20px;
+    margin: auto;
+    border-radius: 32px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+.column1{
+    width: 66%;
+    height: 90vh;
+    float: left;
+}
+.column2{
+    width: 33%;
+    height: 90vh;
+    float: left;
+}
+.btn{
+    color: #0A3871;
+    background: transparent;
+    padding: 0.70em;
+    margin: auto;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btn:hover{
+    color: #fff;
+    background-color: #0A3871;
+}
+#btn-copy{
+    display: block;
+    width: 90%;
+}
+#btn-encript{
+    width: 40%;
+    background-color: #0A3871;
+    color: #fff;
+    margin-right: 10px;
+
+}
+#btn-encript:hover{
+    color: #0A3871;
+    background: transparent;
+    
+}
+#btn-decript{
+    width: 40%;
+}
+.btn-container{
+    padding: 10px;
+}
+
+@media only screen and (max-width:1080px) {
+    
+    .column1,.column2{
+        width: 100%;
+        margin: 25px auto;
+    }
+    
+}
