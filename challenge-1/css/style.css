@@ -2,127 +2,181 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #0A3871;
 }
 body{
+    
     background-color: #F3F5FC;
+}
+.container{
+    width: 100%;
+    height: 90vh;
+    padding: 30px;
+}
+.column1{
+    width: 66.66%;
+    height: 100%;
+    margin: 20px 0;
+    float: left;
+}
+.column2{
+    width: 33.33%;
+    height: 100%;
+    margin: 20px 0;
+    float: left;
+    background-color: #fff;
+    border-radius: 26px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 }
 header{
     height: 10%;
 }
-.container{
-    width: 100%;
-    margin: auto;
-    padding: 20px;
-    clear: both;
+main{
+    height: 90%;
+    padding: 10px;
+    background: transparent;
+}
+aside{
+    height: 100%;
+    padding: 10px;
 }
 textarea{
-    font-size: 32px;
-    background: transparent;
-    border: none;
-    color: #0A3871;
     resize: none;
-    padding: 25px;
+    border: none;
+    padding: 30px;
+    background-color: #fff;
 }
-
-::placeholder {
-    color: #0A3871;
-    opacity: 1; 
-  }
-
+.textarea-container{
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
 textarea:focus{
     border: none;
     outline: none;
 }
-#ta-encripted::placeholder {
-
-    color: #343A40;
+::placeholder {
+    color: #0A3871;
     opacity: 1; 
-}
+  }
 #ta-encript{
     width: 100%;
     height: 90%;
-    margin: auto;
+    background: transparent;
+    font-size: 26px;
 }
-#ta-encripted{
+.btn-container{
+    height: 10%;
+    padding: 10px 5px;
+}
+#btn-encript, #btn-decript{
+    width: 49%;
+}
+#btn-encript:active{
+    background: transparent;
+    color: #0A3871;
+}
+.btn:active{
+    background-color: #0A3871;
+    color: #fff;
+}
+#btn-encript{
+    background-color: #0A3871;
+    color: #fff;
+}
+#ta-decript{
     width: 100%;
-    height: 90%;
-    color: #495057;
-    font-size: 24px;
+    height: 91%;
+    font-size: 18px;
 }
-main{
-    height: 90%;
-}
-aside{
-    height: 100%;
-}
-.ta-container1{
-    width: 85%;
-    height: 100%;
-    padding: 20px;
-    margin: auto;
-}
-.ta-container2{
-    width: 75%;
-    height: 100%;
-    background-color: #fff;
-    padding: 20px;
-    margin: auto;
-    border-radius: 32px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-}
-.column1{
-    width: 66%;
-    height: 90vh;
-    float: left;
-}
-.column2{
-    width: 33%;
-    height: 90vh;
-    float: left;
+#btn-copy{
+    width: 100%;
 }
 .btn{
     color: #0A3871;
     background: transparent;
-    padding: 0.70em;
-    margin: auto;
+    padding: 0.5em;
     border-radius: 12px;
     font-size: 16px;
     cursor: pointer;
 }
-.btn:hover{
-    color: #fff;
-    background-color: #0A3871;
+.msg-container{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
-#btn-copy{
-    display: block;
-    width: 90%;
-}
-#btn-encript{
-    width: 40%;
-    background-color: #0A3871;
-    color: #fff;
-    margin-right: 10px;
+.msg-container object{
+    width: 100%;
 
 }
-#btn-encript:hover{
-    color: #0A3871;
-    background: transparent;
+.msg-container p{
+    font-family: 'Inter','sans-serif';
+    margin: 10px 0;
+    text-align: center;
+}
+.bold{
+    font-weight: bold;
+    font-size: 20px;
+}
+footer{
     
-}
-#btn-decript{
-    width: 40%;
-}
-.btn-container{
-    padding: 10px;
+    font-family: 'Inter', 'sans-serif';
+    float: left;
+    width: 100%;
+    height: 10vh;
+    position: relative;
 }
 
-@media only screen and (max-width:1080px) {
+footer  p{
+    text-align: center;
+    vertical-align: bottom;
+    font-weight: bold;
+}
+.end-page{
+    width: 100%;
+    position: absolute;
+    padding: 20px;
+    top: 50%;
+    transform: translateY(-50%);
     
-    .column1,.column2{
+}
+svg{
+    width: 20px;
+    fill: #0A3871;
+}
+.hidden{
+    display: none;
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .column1, .column2{
         width: 100%;
-        margin: 25px auto;
     }
-    .ta-container1, .ta-container2{
+    .msg-container object{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    
+    #ta-encript{
+        height: 80%;
+    }
+    .btn-container{
+        height: 19%;
+    }
+    #btn-encript, #btn-decript{
         width: 100%;
+        margin: 3px 0;
     }
+    
 }

@@ -6,11 +6,20 @@ let btn_copy = document.getElementById("btn-copy")
 function encriptText(){
 
     let ta_encript = document.getElementById("ta-encript")
-    let ta_encripted = document.getElementById("ta-encripted")
+    let ta_decript = document.getElementById("ta-decript")
+    let msg_div = document.getElementById("msg-div")
+    let text = ta_encript.value
     // Obtenemos el valor del textarea, convertirlo a minúsculas y remover espacios del inicio/final
-    let text = ta_encript.value.toLowerCase().trim()
+    if(!text){
+        msg_div.classList.remove("hidden")
+        btn_copy.classList.add("hidden")
+        ta_decript.value = ''
+        return
+    }
+    text = text.toLowerCase().trim()
     let new_text = ''
-
+    btn_copy.classList.remove("hidden")
+    msg_div.classList.add("hidden")
     // Iteramos sobre nuestro texto y reemplezamos los respectivos caracteres con su valor secreto
     for(let char of text){
 
@@ -36,17 +45,27 @@ function encriptText(){
     }
     
     // Ponemos nuestra cadena encriptada en el textarea correspondiente
-    ta_encripted.value = new_text
+    ta_decript.value = new_text
 }
 
 function decriptText(){
 
     let ta_encript = document.getElementById("ta-encript")
-    let ta_encripted = document.getElementById("ta-encripted")
+    let ta_decript = document.getElementById("ta-decript")
+    let msg_div = document.getElementById("msg-div")
     // Obtenemos el valor del textarea, convertirlo a minúsculas y remover espacios del inicio/final
-    let text = ta_encript.value.toLowerCase().trim()
+    let text = ta_encript.value
+    if(!text){
+        msg_div.classList.remove("hidden")
+        btn_copy.classList.add("hidden")
+        ta_decript.value = ''
+        return
+    }
+    
+    btn_copy.classList.remove("hidden")
+    msg_div.classList.add("hidden")
+    text = text.toLowerCase().trim()
     let new_text = text
-
     // Reemplezamos todas las ocurrencias de las secuencias secretas para desencriptar el mensaje
     new_text = new_text.replaceAll('ai', 'a')
     new_text = new_text.replaceAll('enter', 'e')
@@ -55,18 +74,18 @@ function decriptText(){
     new_text = new_text.replaceAll('ufat', 'u')
 
     // Ponemos nuestra cadena encriptada en el textarea correspondiente
-    ta_encripted.value = new_text
+    ta_decript.value = new_text
 }
 
 function copyClipboard(){
     
-    let ta_encripted = document.getElementById("ta-encripted")
+    let ta_decript = document.getElementById("ta-decript")
     // Select the text field
-    ta_encripted.select()
-    ta_encripted.setSelectionRange(0, 99999) // For mobile devices
+    ta_decript.select()
+    ta_decript.setSelectionRange(0, 99999) // For mobile devices
   
     // Copy the text inside the text field
-    navigator.clipboard.writeText(ta_encripted.value)
+    navigator.clipboard.writeText(ta_decript.value)
   
 }
 
